@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace common\bootstrap;
 
-use common\services\TransactionManager;
+use backend\services\TransactionManager;
 use yii\base\Application;
 use yii\base\BootstrapInterface;
 use yii\rbac\ManagerInterface;

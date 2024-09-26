@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace common\services;
+namespace backend\services;
 
 use DomainException;
 use yii\rbac\ManagerInterface;
