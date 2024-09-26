@@ -10,10 +10,14 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
-    'bootstrap' => ['log'],
+    'bootstrap' => [
+        'log',
+        'common\bootstrap\SetUp',
+    ],
     'modules' => [
         'user' => [
             'class' => 'backend\modules\user\Module',
+            'defaultRoute' => 'user',
         ],
     ],
     'components' => [
@@ -45,6 +49,11 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'user' => 'user/user/index',
+                'user/create' => 'user/user/create',
+                'user/<id:\d+>' => 'user/user/view',
+                'user/<id:\d+>/update' => 'user/user/update',
+                'user/<id:\d+>/delete' => 'user/user/delete',
             ],
         ],
     ],
