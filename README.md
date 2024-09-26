@@ -10,3 +10,16 @@ make dc_up
 ```
 
 Предварительно настроить `./docker/.env`, `./docker/mysql/.env`
+
+## Запустить миграции
+
+```shell
+php yii migrate --migrationPath=@yii/rbac/migrations
+php yii migrate
+```
+
+## Создать админа
+
+```shell
+php yii create-admin/index admin example@mail.com password
+```
